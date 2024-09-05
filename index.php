@@ -9,5 +9,5 @@ if ($argc != 3) {
 } else if ($argv[2] == 0) {
     fwrite(STDERR, "Второй аргумент равен 0. На 0 делить нельзя!" . PHP_EOL);
 } else {
-    fwrite(STDERR, "$argv[1] / $argv[2] = " . $argv[1] / $argv[2] . PHP_EOL);
+    fwrite(STDOUT, "$argv[1] / $argv[2] = " . $argv[1] / $argv[2] . PHP_EOL);
 }
