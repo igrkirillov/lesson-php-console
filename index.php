@@ -1,13 +1,16 @@
 <?php
 
-if ($argc != 3) {
-    fwrite(STDERR, "Кол-во аргументов должно быть два!" . PHP_EOL);
-} else if (!is_numeric($argv[1])) {
+echo "Введите первое значение: ";
+$arg1 = trim(fgets(STDIN));
+echo "Введите второе значение: ";
+$arg2 = trim(fgets(STDIN));
+
+if (!is_numeric($arg1)) {
     fwrite(STDERR, "Первый аргумент не число!" . PHP_EOL);
-} else if (!is_numeric($argv[2])) {
+} else if (!is_numeric($arg2)) {
     fwrite(STDERR, "Второй аргумент не число!" . PHP_EOL);
-} else if ($argv[2] == 0) {
+} else if ($arg2 == 0) {
     fwrite(STDERR, "Второй аргумент равен 0. На 0 делить нельзя!" . PHP_EOL);
 } else {
-    fwrite(STDOUT, "$argv[1] / $argv[2] = " . $argv[1] / $argv[2] . PHP_EOL);
+    fwrite(STDOUT, "$arg1 / $arg2 = " . $arg1 / $arg2 . PHP_EOL);
 }
